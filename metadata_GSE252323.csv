@@ -1,0 +1,5 @@
+"sample_id","geo_accession","condition","platform","tissue","dataset_id"
+"C01","GSM7999436","Control","Illumina_NovaSeq6000","Surgical_Brain","GSE252323"
+"C02","GSM7999437","Control","Illumina_NovaSeq6000","Surgical_Brain","GSE252323"
+"C03","GSM7999438","Control","Illumina_NovaSeq6000","Surgical_Brain","GSE252323"
+"C04","GSM7999439","Control","Illumina_NovaSeq6000","Surgical_Brain","GSE252323"
