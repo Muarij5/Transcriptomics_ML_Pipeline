@@ -1,9 +1,9 @@
 # Transcriptomics ML Pipeline — Epilepsy Multi-Cohort Study
 
 Personal contribution to an ongoing epilepsy transcriptomics research project.
-This repository covers end-to-end analysis — data integration, batch correction,
+This repository covers end-to-end analysis, data integration, batch correction,
 differential expression, and machine learning-based gene ranking, across
-7 public RNA-seq cohorts. Part of an unpublished study currently in the
+7 public RNA-seq cohorts. Part of a larger unpublished study currently in the
 manuscript-writing phase.
 
 ## Overview
@@ -16,8 +16,13 @@ rank the most predictive genes with explainability analysis.
 
 ## Datasets
 
-RNA-seq raw counts and metadata integrated from 7 GEO series:
-GSE186334, GSE94744, GSE134697, GSE213488, GSE252323 (LEAT), GSE256068, GSE310367
+RNA-seq raw counts and metadata integrated from 7 public GEO series:
+GSE186334, GSE94744, GSE134697, GSE213488, GSE252323 (LEAT), GSE256068, GSE310367.
+
+Note: after tissue-based QC filtering (excluding Cortex, Surgical_Brain, and
+Brain-only samples), downstream analysis (batch correction, differential
+expression, PCA, ML) was performed on 5 cohorts contributing brain-region-matched
+samples: GSE186334, GSE94744, GSE134697, GSE213488, GSE256068.
 
 ## Pipeline
 
@@ -38,8 +43,13 @@ merged all cohorts on their common gene set, and applied QC filtering
 - Applied ComBat-seq to correct for cross-dataset batch effects on raw counts
 - Ran DESeq2 for differential expression (mTLE, FCD, TSC vs. Control)
 - Ran a threshold ablation study (log2FC × padj grid) to test result sensitivity
-- Generated PCA and volcano plots.
+- Generated PCA, volcano, and MA plots pre/post correction
 - Identified DEG overlaps across conditions (pairwise + 3-way, with Venn diagram)
+
+**Generated plots** (`results/`):
+- PCA before/after batch correction (by condition, dataset, platform, tissue)
+- Volcano plots: FCD/mTLE/TSC vs. Control
+- MA plots: FCD/mTLE/TSC vs. Control
 
 **4. ML matrix construction** (`code/ML_matrix_code.R`)
 Built a machine learning-ready matrix using the union of DEGs across all
@@ -70,6 +80,7 @@ classify Control vs. Disease samples and rank the most predictive genes:
 ├── results/ DEG lists, ablation study, final expression/ML matrices, figures
 └── README.md
 ```
+
 ## Status
 
 Full pipeline complete: data integration → batch correction → differential
