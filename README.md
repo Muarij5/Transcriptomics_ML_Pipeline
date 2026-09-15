@@ -47,7 +47,6 @@ merged all cohorts on their common gene set, and applied QC filtering
 - Generated PCA, volcano, and MA plots pre/post correction
 =======
 - Generated PCA, volcano, PCA and MA plots.
->>>>>>> e9bd10b34b6e6a890dcb95709d8e5789f4aa8534
 - Identified DEG overlaps across conditions (pairwise + 3-way)
 
 **Generated plots** (`results/`):
@@ -68,8 +67,8 @@ classify Control vs. Disease samples and rank the most predictive genes:
   overfitting penalty built into the objective function
 - SMOTE class balancing and feature filtering applied strictly within inner
   training folds only, to prevent test-fold data leakage
-- Gene importance computed via three independent methods — SHAP values,
-  permutation importance, and native feature importance — combined into a
+- Gene importance computed via three independent methods, SHAP values,
+  permutation importance, and native feature importance, combined into a
   per-model consensus score
 - Final gene panel selected via RF ∩ ET intersection (genes ranked highly
   by both models), reducing single-model bias
