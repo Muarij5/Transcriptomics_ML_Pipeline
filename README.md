@@ -43,7 +43,11 @@ merged all cohorts on their common gene set, and applied QC filtering
 - Applied ComBat-seq to correct for cross-dataset batch effects on raw counts
 - Ran DESeq2 for differential expression (mTLE, FCD, TSC vs. Control)
 - Ran a threshold ablation study (log2FC × padj grid) to test result sensitivity
+<<<<<<< HEAD
 - Generated PCA, volcano, and MA plots pre/post correction
+=======
+- Generated PCA, volcano, PCA and MA plots.
+>>>>>>> e9bd10b34b6e6a890dcb95709d8e5789f4aa8534
 - Identified DEG overlaps across conditions (pairwise + 3-way, with Venn diagram)
 
 **Generated plots** (`results/`):
