@@ -2,8 +2,8 @@
 
 Personal contribution to an ongoing epilepsy transcriptomics research project.
 This repository covers end-to-end analysis — data integration, batch correction,
-differential expression, and machine learning-based gene ranking — across
-7 public RNA-seq cohorts. Part of a larger unpublished study currently in the
+differential expression, and machine learning-based gene ranking, across
+7 public RNA-seq cohorts. Part of an unpublished study currently in the
 manuscript-writing phase.
 
 ## Overview
@@ -38,7 +38,7 @@ merged all cohorts on their common gene set, and applied QC filtering
 - Applied ComBat-seq to correct for cross-dataset batch effects on raw counts
 - Ran DESeq2 for differential expression (mTLE, FCD, TSC vs. Control)
 - Ran a threshold ablation study (log2FC × padj grid) to test result sensitivity
-- Generated PCA, volcano, and MA plots pre/post correction
+- Generated PCA and volcano plots.
 - Identified DEG overlaps across conditions (pairwise + 3-way, with Venn diagram)
 
 **4. ML matrix construction** (`code/ML_matrix_code.R`)
