@@ -63,12 +63,13 @@ classify Control vs. Disease samples and rank the most predictive genes:
   train/test gap monitoring to flag overfitting per fold
 
 ## Repository structure
+```
 ├── data/ raw counts, cleaned expression matrices, sample metadata
 ├── code/ R scripts — metadata curation, annotation, normalization/DEG analysis, ML matrix construction
 ├── notebook/ ML classification and gene ranking notebook
 ├── results/ DEG lists, ablation study, final expression/ML matrices, figures
 └── README.md
-
+```
 ## Status
 
 Full pipeline complete: data integration → batch correction → differential
