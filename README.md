@@ -1,9 +1,9 @@
-# Transcriptomics ML Pipeline — Epilepsy Multi-Cohort Study
+# Transcriptomics ML Pipeline - Epilepsy Multi-Cohort Study
 
-Personal contribution to an ongoing epilepsy transcriptomics research project.
+Personal contribution to the epilepsy transcriptomics research project.
 This repository covers end-to-end analysis, data integration, batch correction,
 differential expression, and machine learning-based gene ranking, across
-7 public RNA-seq cohorts. Part of a larger unpublished study currently in the
+7 public RNA-seq cohorts. Part of an unpublished study currently in the
 manuscript-writing phase.
 
 ## Overview
@@ -48,7 +48,7 @@ merged all cohorts on their common gene set, and applied QC filtering
 =======
 - Generated PCA, volcano, PCA and MA plots.
 >>>>>>> e9bd10b34b6e6a890dcb95709d8e5789f4aa8534
-- Identified DEG overlaps across conditions (pairwise + 3-way, with Venn diagram)
+- Identified DEG overlaps across conditions (pairwise + 3-way)
 
 **Generated plots** (`results/`):
 - PCA before/after batch correction (by condition, dataset, platform, tissue)
